@@ -24,7 +24,7 @@ export const updateUser = async (userData, userId) => {
 };
 
 export const deleteUser = async (userId) => {
-  const { rowCount } = await query(`DELETE FROM clients_tb WHERE id = $1`, [
+  const { rowCount } = await query(`DELETE FROM users_tb WHERE id = $1`, [
     userId,
   ]);
   return rowCount > 0; // Returns true if a row was deleted, false otherwise
